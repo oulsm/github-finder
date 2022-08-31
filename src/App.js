@@ -5,10 +5,12 @@ import Home from './page/Home';
 import About from './page/About';
 import NotFound from './page/NotFound';
 import {GithubProvider } from './context/github/GithubContext'
+import { AlertProvider } from './context/alert/AlertContext'
 
 function App() {
   return (
     <GithubProvider>
+      <AlertProvider>
     <Router>
       
     <div className='flex flex-col justify-between h-screen'>
@@ -26,6 +28,7 @@ function App() {
     </div>
 
     </Router>
+    </AlertProvider>
     </GithubProvider>
   );
 }
